@@ -7,9 +7,9 @@ public class Calculator {
         this.converter = new Converter();
     }
 
-    public String calculate(String [] args) throws CalculatorException {
-        if (args.length < 3) {
-            throw new CalculatorException("Введите выражение через пробел");
+    public String calculate(String[] args) throws CalculatorException {
+        if (args.length != 3) {
+            throw new CalculatorException("Введите выражение из двух чисел и знака через пробел");
         }
         try {
             int result = calculate(Integer.parseInt(args[0]), Integer.parseInt(args[2]), args[1]);
